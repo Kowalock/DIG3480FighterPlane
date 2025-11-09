@@ -4,19 +4,32 @@ using UnityEngine;
 
 public class EnemyRichard : MonoBehaviour
 {
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(new Vector3(0, -1, 0) * Time.deltaTime * 1f);
-        if (transform.position.y < -6.5f)
+        transform.Translate(new Vector3(1, -1, 0) * Time.deltaTime * 3f); //moves diagnol right
+
+        if(transform.position.x > 10f)
         {
-            Destroy(this.gameObject);
+            transform.position = new Vector3(-10f, transform.position.y, transform.position.z); //wraps around to left side
         }
+        else if(transform.position.x < -10f)
+        {
+            transform.position = new Vector3(10f, transform.position.y, transform.position.z); //wraps around to right side
+        }
+
+        if(transform.position.y < -6.5f)
+        {
+            Destroy(gameObject);
+        }
+                                                                          
     }
 }
