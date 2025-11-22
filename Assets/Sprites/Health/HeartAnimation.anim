@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HealthAnimation
+  m_Name: HeartAnimation
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -31,15 +31,17 @@ AnimationClip:
     - time: 0.6666667
       value: {fileID: 21300000, guid: 2c9809e97cac3bf4ebf6fd7e6ac61cbd, type: 3}
     - time: 0.8333333
-      value: {fileID: 21300000, guid: 9a75c7e8df0ad91409415ceff7e704f3, type: 3}
+      value: {fileID: 21300000, guid: 505835f186c79a24eac565a27c60b566, type: 3}
     - time: 1
+      value: {fileID: 21300000, guid: 9a75c7e8df0ad91409415ceff7e704f3, type: 3}
+    - time: 1.1666666
       value: {fileID: 21300000, guid: 5a882eb19ec00964ab15ba814a3ffafb, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 60
+  m_SampleRate: 12
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -61,6 +63,7 @@ AnimationClip:
     - {fileID: 21300000, guid: 471a60cb81eeda0499bd37ccb7fef188, type: 3}
     - {fileID: 21300000, guid: 439f0045a65c21044855adef53676c29, type: 3}
     - {fileID: 21300000, guid: 2c9809e97cac3bf4ebf6fd7e6ac61cbd, type: 3}
+    - {fileID: 21300000, guid: 505835f186c79a24eac565a27c60b566, type: 3}
     - {fileID: 21300000, guid: 9a75c7e8df0ad91409415ceff7e704f3, type: 3}
     - {fileID: 21300000, guid: 5a882eb19ec00964ab15ba814a3ffafb, type: 3}
   m_AnimationClipSettings:
@@ -68,7 +71,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.0166667
+    m_StopTime: 1.25
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

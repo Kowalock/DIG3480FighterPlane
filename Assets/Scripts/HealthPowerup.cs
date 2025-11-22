@@ -10,20 +10,32 @@ public class HealthPowerup : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        Destroy(gameObject, 3f);
 
     }
     // Update is called once per frame
     void Update()
     {
-        Destroy(this.gameObject, 3f);
     }
 
     private void OnTriggerEnter2D(Collider2D whatDidIHit)
     {
         if (whatDidIHit.tag == "Player")
         {
-            whatDidIHit.GetComponent<PlayerController>().GetALife();
-            Destroy(this.gameObject);
+            PlayerController player = whatDidIHit.GetComponent<PlayerController>();
+
+            if(player.lives < 3)
+            {
+                player.GetALife();
+                gameManager.PlaySound(4);
+            }
+            else 
+            {
+                gameManager.AddScore(1);
+                gameManager.PlaySound(3);
+            }
+            Destroy(gameObject);
+
         }
     }
 }
